@@ -57,79 +57,42 @@ Shell
 [python driver_script.py]
 
 # 8. Expected Output:
-   === Users ===
-userID | username | email | userRole | createdAt
-1 | song_k | song.k@email.com | Admin | 2026-01-10 09:15:00
-2 | bassong_m | bassong.m@email.com | Field Agent | 2026-02-03 14:30:00
-3 | grace_n | grace.n@email.com | Field Agent | 2026-02-18 08:45:00
-4 | kam_t | kam.t@email.com | Contributor | 2026-03-22 17:00:00
 
-=== Locations ===
-locationID | locationName | latitude | longitude | isVerified | locationStatus | lastUpdatedAt
-1 | Mbay Central Borehole | 8.67000000 | 15.97000000 | 1 | Operational | 2026-03-01 10:00:00
-2 | Bangui Community Clinic | 4.39470000 | 18.55820000 | 1 | Operational | 2026-03-05 11:30:00
-3 | Sarh Emergency Hub | 9.15000000 | 18.39000000 | 0 | Under Maintenance | 2026-04-12 09:20:00
-4 | Kikwit Health Post | -5.04100000 | 18.81600000 | 1 | Operational | 2026-04-20 14:45:00
-5 | Berberati River Water Point | 4.26100000 | 15.79200000 | 0 | Unavailable | 2026-05-02 16:10:00
+CUSTOMERS
+[(1, 'Parker', 'Brown', 'p.brown@yeehaw.com'), (2, 'Skye', 'Cantu', 'skye.c@yeehaw.com'), (3, 'Dierks', 'Hays', 'Dierks.Hays@yeehaw.com'), (4, 'Susan', 'Anderson', 'S.Anderson@yeehaw.com'), (5, 'Kayla', 'Smith', 'K.Smith@yeehaw.com')]
 
-=== Categories ===
-categoryID | categoryName | description
-1 | Water Point | Pumps, wells, and other sources of clean drinking water
-2 | Medical Facility | Clinics, health posts, and hospitals
-3 | Emergency Hub | Locations that coordinate emergency response and supplies
-4 | Shelter | NULL
+EMPLOYEES
+[(1, 'Rachelle', 'Smith'), (2, 'Ruth', 'Brown'), (3, 'Lonnie', 'Cantu')]
 
-=== Reviews ===
-reviewID | locationID | userID | rating | commentText | createdAt
-1 | 1 | 2 | 5 | Pump works well and the water is clear. | 2026-04-02 10:20:00
-2 | 2 | 2 | 4 | Staff were helpful but the wait was long. | 2026-04-15 13:10:00
-3 | 1 | 3 | 3 | NULL | 2026-05-01 09:00:00
-4 | 4 | 4 | 2 | Ran out of basic supplies during my visit | 2026-05-20 16:45:00
+GENRES
+[(1, 'Children'), (2, 'Young Adult'), (3, 'Thriller'), (4, 'Romance'), (5, 'Horror'), (6, 'Western')]
 
-=== LocationCategories ===
-locationCategoryID | locationName | categoryName
-1 | Mbay Central Borehole | Water Point
-2 | Bangui Community Clinic | Medical Facility
-3 | Sarh Emergency Hub | Emergency Hub
-4 | Sarh Emergency Hub | Shelter
-5 | Kikwit Health Post | Medical Facility
-6 | Berberati River Water Point | Water Point
+BOOKS
+[(1, 'Charlottes Web', 'E. B. White', Decimal('20.00'), 1), (2, 'Diary of a Wimpy Kid', 'Jeff Kinney', Decimal('5.00'), 2), (3, 'Verity', 'Colleen Hoover', Decimal('12.00'), 3), (4, 'Orphan X', 'Gregg Hurwitz', Decimal('15.00'), 4), (5, 'Never Lie', 'Freida McFadden', Decimal('16.00'), 5), (6, 'The Shining', 'Stephen King', Decimal('17.00'), 6), (7, 'Gone Girl', 'Gillian Flynn', Decimal('9.99'), 3), (8, 'Lonesome Dove', 'Larry McMurtry', Decimal('16.99'), 6), (9, 'True Grit', 'Charles Portis', Decimal('10.00'), 6), (10, 'The Lion at Bay', 'Robert Wisehart', Decimal('25.00'), 4)]
 
-=== SavedLocations ===
-savedLocationID | userID | username | locationID | locationName | savedAt
-1 | 2 | bassong_m | 1 | Mbay Central Borehole | 2026-04-01 08:00:00
-2 | 2 | bassong_m | 2 | Bangui Community Clinic | 2026-04-01 08:05:00
-3 | 2 | bassong_m | 3 | Sarh Emergency Hub | 2026-04-02 11:30:00
-4 | 3 | grace_n | 1 | Mbay Central Borehole | 2026-04-10 12:00:00
-5 | 4 | kam_t | 1 | Mbay Central Borehole | 2026-05-05 15:20:00
+SALES
+[(1, 1, 1, datetime.datetime(2026, 10, 1, 10, 15), Decimal('27.00')), (2, 2, 2, datetime.datetime(2026, 10, 2, 14, 30), Decimal('31.00')), (3, 3, 3, datetime.datetime(2026, 10, 3, 9, 45), Decimal('17.00')), (4, 4, 1, datetime.datetime(2026, 10, 4, 16, 10), Decimal('26.98')), (5, 5, 2, datetime.datetime(2026, 10, 5, 11, 20), Decimal('35.00'))]
 
-=== SavedLocations after CREATE ===
-savedLocationID | userID | username | locationID | locationName | savedAt
-1 | 2 | bassong_m | 1 | Mbay Central Borehole | 2026-04-01 08:00:00
-2 | 2 | bassong_m | 2 | Bangui Community Clinic | 2026-04-01 08:05:00
-3 | 2 | bassong_m | 3 | Sarh Emergency Hub | 2026-04-02 11:30:00
-4 | 3 | grace_n | 1 | Mbay Central Borehole | 2026-04-10 12:00:00
-5 | 4 | kam_t | 1 | Mbay Central Borehole | 2026-05-05 15:20:00
-7 | 1 | song_k | 4 | Kikwit Health Post | 2026-11-05 16:59:49
+SALE ITEMS
+[(1, 1, 2, 1, Decimal('5.00')), (2, 1, 3, 1, Decimal('12.00')), (3, 1, 9, 1, Decimal('10.00')), (4, 2, 4, 1, Decimal('15.00')), (5, 2, 5, 1, Decimal('16.00')), (6, 3, 6, 1, Decimal('17.00')), (7, 4, 7, 1, Decimal('9.99')), (8, 4, 8, 1, Decimal('16.99')), (9, 5, 1, 1, Decimal('20.00')), (10, 5, 2, 1, Decimal('5.00')), (11, 5, 3, 1, Decimal('10.00'))]
 
+ADD SALE ITEMS
+Rows added: 1
 
-=== SavedLocations after UPDATE ===
-savedLocationID | userID | username | locationID | locationName | savedAt
-1 | 2 | bassong_m | 1 | Mbay Central Borehole | 2026-04-01 08:00:00
-2 | 2 | bassong_m | 2 | Bangui Community Clinic | 2026-04-01 08:05:00
-3 | 2 | bassong_m | 3 | Sarh Emergency Hub | 2026-04-02 11:30:00
-4 | 3 | grace_n | 1 | Mbay Central Borehole | 2026-04-10 12:00:00
-5 | 4 | kam_t | 1 | Mbay Central Borehole | 2026-05-05 15:20:00
-7 | 1 | song_k | 5 | Berberati River Water Point | 2026-11-05 16:59:49
+SALE ITEMS AFTER INSERT
+[(1, 1, 2, 1, Decimal('5.00')), (2, 1, 3, 1, Decimal('12.00')), (3, 1, 9, 1, Decimal('10.00')), (4, 2, 4, 1, Decimal('15.00')), (5, 2, 5, 1, Decimal('16.00')), (6, 3, 6, 1, Decimal('17.00')), (7, 4, 7, 1, Decimal('9.99')), (8, 4, 8, 1, Decimal('16.99')), (9, 5, 1, 1, Decimal('20.00')), (10, 5, 2, 1, Decimal('5.00')), (11, 5, 3, 1, Decimal('10.00')), (12, 1, 1, 2, Decimal('20.00'))]
 
+UPDATE SALE ITEMS
+Rows updated: 1
 
-=== SavedLocations after DELETE ===
-savedLocationID | userID | username | locationID | locationName | savedAt
-1 | 2 | bassong_m | 1 | Mbay Central Borehole | 2026-04-01 08:00:00
-2 | 2 | bassong_m | 2 | Bangui Community Clinic | 2026-04-01 08:05:00
-3 | 2 | bassong_m | 3 | Sarh Emergency Hub | 2026-04-02 11:30:00
-4 | 3 | grace_n | 1 | Mbay Central Borehole | 2026-04-10 12:00:00
-5 | 4 | kam_t | 1 | Mbay Central Borehole | 2026-05-05 15:20:00
+SALE ITEMS AFTER UPDATE
+[(1, 1, 2, 1, Decimal('5.00')), (2, 1, 3, 1, Decimal('12.00')), (3, 1, 9, 1, Decimal('10.00')), (4, 2, 4, 1, Decimal('15.00')), (5, 2, 5, 1, Decimal('16.00')), (6, 3, 6, 1, Decimal('17.00')), (7, 4, 7, 1, Decimal('9.99')), (8, 4, 8, 1, Decimal('16.99')), (9, 5, 1, 1, Decimal('20.00')), (10, 5, 2, 1, Decimal('5.00')), (11, 5, 3, 1, Decimal('10.00')), (12, 1, 1, 3, Decimal('20.00'))]
+
+DELETE SALE ITEMS
+Rows deleted: 1
+
+SALE ITEMS AFTER DELETE
+[(1, 1, 2, 1, Decimal('5.00')), (2, 1, 3, 1, Decimal('12.00')), (3, 1, 9, 1, Decimal('10.00')), (4, 2, 4, 1, Decimal('15.00')), (5, 2, 5, 1, Decimal('16.00')), (6, 3, 6, 1, Decimal('17.00')), (7, 4, 7, 1, Decimal('9.99')), (8, 4, 8, 1, Decimal('16.99')), (9, 5, 1, 1, Decimal('20.00')), (10, 5, 2, 1, Decimal('5.00')), (11, 5, 3, 1, Decimal('10.00'))]
 
 
 # Originality and acknowledgments:
