@@ -45,11 +45,11 @@ FROM sales;
 -- read Sale_items
 
 SELECT
-    sale_item_id
+    sale_item_id,
     sale_id,
     book_id,
     quantity,
-    unit_price,
+    unit_price
 FROM sale_items;
 
 -- create Sale_items
