@@ -46,7 +46,9 @@ CREATE TABLE books(
     price decimal (8, 2) NOT NULL,
     genre_id INT NOT NULL,
     PRIMARY KEY (book_id),
-    FOREIGN KEY (genre_id) REFERENCES genres(genre_id)
+    FOREIGN KEY (genre_id) 
+        REFERENCES genres(genre_id)
+        ON DELETE RESTRICT
 );
 
 -- Sales Table
@@ -57,8 +59,12 @@ CREATE TABLE sales (
     sale_date DATETIME NOT NULL,
     total_price decimal (19,2) NOT NULL,
     PRIMARY KEY(sale_id),
-    FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
-    FOREIGN KEY (employee_id) REFERENCES employees(employee_id)
+    FOREIGN KEY (customer_id) 
+        REFERENCES customers(customer_id)
+        ON DELETE RESTRICT,
+    FOREIGN KEY (employee_id) 
+        REFERENCES employees(employee_id)
+        ON DELETE RESTRICT  
 );
 
 -- Sale_items Table
@@ -69,8 +75,12 @@ CREATE TABLE sale_items(
     quantity INT NOT NULL,
     unit_price decimal (19,2) NOT NULL,
     PRIMARY KEY (sale_item_id),
-    FOREIGN KEY (sale_id) REFERENCES sales(sale_id),
-    FOREIGN KEY (book_id) REFERENCES books(book_id)
+    FOREIGN KEY (sale_id) 
+        REFERENCES sales(sale_id)
+        ON DELETE CASCADE,
+    FOREIGN KEY (book_id) 
+        REFERENCES books(book_id)
+        ON DELETE RESTRICT
 );
 
 -- Customers
@@ -108,8 +118,8 @@ VALUES
 ('Orphan X', 'Gregg Hurwitz', 15.00, 4), 
 ('Never Lie', 'Freida McFadden', 16.00, 5), 
 ('The Shining', 'Stephen King', 17.00, 6), 
-('Gone Girl', 'Gillian Flynn',	9.99, 3), 
-('Lonesome Dove', 'Larry McMurtry', 16.99, 6),
+('Gone Girl', 'Gillian Flynn',	10.00, 3), 
+('Lonesome Dove', 'Larry McMurtry', 17.00, 6),
 ('True Grit', 'Charles Portis', 10.00, 6), 
 ('The Lion at Bay', 'Robert Wisehart', 25.00, 4);
 
@@ -134,8 +144,8 @@ VALUES
 
 (3, 6, 1, 17.00),
 
-(4, 7, 1, 9.99),
-(4, 8, 1, 16.99),
+(4, 7, 1, 10.00),
+(4, 8, 1, 17.00),
 
 (5, 1, 1, 20.00),
 (5, 2, 1, 5.00),
